@@ -20,10 +20,12 @@ body {
 
 h1, h2 {
     color: rgb(220, 181, 127);
+    font-family: "Oswald", sans-serif;
 }
 p {
     color: rgb(220, 181, 127);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family:"Oswald", sans-serif;
+    font-weight: 200;
 }
 
 .skill {
