@@ -1,0 +1,58 @@
+body {
+    background-color: #2d3250;
+}
+
+.profil {
+  display: flex;              /* gör två kolumner */
+  justify-content: center;      
+  gap: 30px;                  /* avstånd mellan bild och text */
+}
+
+.profil img {
+  width: 400px;               /* bestäm bildstorlek */
+  border-radius: 10px;        /* rundade hörn (valfritt) */
+  box-shadow: 0 4px 8px black;
+}
+
+.profil .info {
+  max-width: 600px;           /* gör så texten inte blir för bred */
+}
+
+h1, h2 {
+    color: rgb(220, 181, 127);
+}
+p {
+    color: rgb(220, 181, 127);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.skill {
+  margin: 15px 0;
+}
+
+.bar {
+  background: #cac5c5;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 25px;
+  width: 700px;
+  max-width: 100%;
+}
+
+.fill {
+  height: 100%;
+  width: 0; /* startar tom */
+  line-height: 25px;
+  color: rgb(255, 255, 255);
+  text-align: right;
+  padding-right: 10px;
+  border-radius: 20px;
+  transition: width 2s; /* animation */
+}
+
+.html { background: oklab(39.04% -0.03257 -0.07864); width: 90%; }
+.css { background: #114b7a; width: 85%; }
+.problemlösning { background: #426ab0; width: 90%; }
+.teamwork { background: #1d2f69; width: 100%; }
+
+
