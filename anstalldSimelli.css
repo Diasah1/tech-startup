@@ -1,5 +1,5 @@
 body {
-    background-color: #2d3250;
+    background-color: #393d53;
 }
 
 .profil {
@@ -18,14 +18,24 @@ body {
   max-width: 600px;           /* gör så texten inte blir för bred */
 }
 
-h1, h2 {
+.sned {
+    font-style: italic;
+    color: rgb(248, 163, 44);
+    font-family: "Oswald", sans-serif;
+    font-size: 100px;
+    font-weight: 1000;
+}
+
+h2 {
     color: rgb(220, 181, 127);
     font-family: "Oswald", sans-serif;
 }
-p {
+
+p, h4 {
     color: rgb(220, 181, 127);
     font-family:"Oswald", sans-serif;
-    font-weight: 200;
+    font-weight: 300;
+    font-size: 20px;
 }
 
 .skill {
@@ -33,7 +43,7 @@ p {
 }
 
 .bar {
-  background: #cac5c5;
+  background: #c7c2b7;
   border-radius: 20px;
   overflow: hidden;
   height: 25px;
@@ -50,11 +60,12 @@ p {
   padding-right: 10px;
   border-radius: 20px;
   transition: width 2s; /* animation */
+  box-shadow: 0 7px 10px rgba(0,0,0,1);
 }
 
-.html { background: oklab(39.04% -0.03257 -0.07864); width: 90%; }
-.css { background: #114b7a; width: 85%; }
-.problemlösning { background: #426ab0; width: 90%; }
-.teamwork { background: #1d2f69; width: 100%; }
+.html { background: rgb(213, 141, 8); width: 90%; }
+.css { background: rgb(213, 141, 8); width: 85%; }
+.problemlösning { background: rgb(213, 141, 8); width: 90%; }
+.teamwork { background: rgb(213, 141, 8); width: 100%; }
 
 
