@@ -1,3 +1,4 @@
+// Progress-bar animation
 window.onload = () => {
   document.querySelectorAll('.fill').forEach(bar => {
     if (bar.classList.contains('html')) {
@@ -10,4 +11,3 @@ window.onload = () => {
       bar.style.width = '100%';
     }
   });
-};
