@@ -1,0 +1,62 @@
+[
+  {
+    "id": "P-101",
+    "titel": "Kundportal – onboardingflöde",
+    "roll": "System Designer",
+    "ansvarig": "Melli",
+    "beskrivning": "Design av flöden och systemkontrakt för ny kundonboarding.",
+    "startDatum": "2025-09-10",
+    "slutDatum": "2025-10-15",
+    "status": "Pågår",
+    "prioritet": "Hög",
+    "taggar": ["onboarding", "auth", "ui"]
+  },
+  {
+    "id": "P-102",
+    "titel": "Rapportmotor v2",
+    "roll": "System Designer",
+    "ansvarig": "Melli",
+    "beskrivning": "Speca modulär rapportmotor med JSON-templating.",
+    "startDatum": "2025-09-05",
+    "slutDatum": "2025-10-30",
+    "status": "Planerad",
+    "prioritet": "Medium",
+    "taggar": ["reports", "templates"]
+  },
+  {
+    "id": "P-103",
+    "titel": "Notistjänst (event bus)",
+    "roll": "System Designer",
+    "ansvarig": "Melli",
+    "beskrivning": "Designa eventbus, kontrakt och återförsökspolicy.",
+    "startDatum": "2025-09-20",
+    "slutDatum": "2025-11-01",
+    "status": "Pågår",
+    "prioritet": "Hög",
+    "taggar": ["events", "retry", "queue"]
+  },
+  {
+    "id": "P-104",
+    "titel": "Admin-UI åt support",
+    "roll": "System Designer",
+    "ansvarig": "Melli",
+    "beskrivning": "Informationsarkitektur och systemgränser för adminverktyg.",
+    "startDatum": "2025-09-12",
+    "slutDatum": "2025-10-25",
+    "status": "Pågår",
+    "prioritet": "Låg",
+    "taggar": ["admin", "ia", "rbac"]
+  },
+  {
+    "id": "P-105",
+    "titel": "Datakatalog och API-spec",
+    "roll": "System Designer",
+    "ansvarig": "Melli",
+    "beskrivning": "Definiera datamodeller och OpenAPI-specifikationer.",
+    "startDatum": "2025-09-08",
+    "slutDatum": "2025-10-05",
+    "status": "Pågår",
+    "prioritet": "Hög",
+    "taggar": ["openapi", "schema", "catalog"]
+  }
+]
