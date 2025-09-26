@@ -1,0 +1,48 @@
+{
+   "AllmanBeskrivning": "Som produktchef har jag huvudansvar för flera projekt som sträcker sig över olika delar av vår verksamhet. Projekten omfattar allt från att ta fram strategier och långsiktiga planer till att driva praktiskt utvecklingsarbete i teamet. Mitt fokus ligger på att hålla ihop helheten, prioritera rätt och se till att varje projekt bidrar till företagets övergripande mål. Genom att balansera analys, planering, kundinsikter och intern samordning skapar jag förutsättningar för att våra projekt ska lyckas och leda till produkter som gör skillnad.",
+   "Projekt":[
+   {
+       "Namn": "Produktstrategi och roadmap",
+       "Kategori": "Strategi",
+       "Datum": "2024-10-01",
+       "Beskrivning": "Jag ansvarar för att ta fram en tydlig produktstrategi och roadmap för de kommande månaderna. Det innebär att sätta riktning för utvecklingen, planera milstolpar och se till att alla i teamet arbetar mot gemensamma mål."
+   },
+
+
+   {
+       "Namn": "Kundintervjuer och insikter",
+       "Kategori": "Research",
+       "Datum": "2024-11-15",
+       "Beskrivning": "En central del av mitt arbete är att förstå våra användares behov. Genom kundintervjuer med frilansare samlar jag in värdefulla insikter som vi använder för att förbättra våra produkter och säkerställa att de verkligen skapar nytta i vardagen."
+   },
+
+
+   {
+       "Namn": "KPI:er och användarengagemang",
+       "Kategori": "Analys",
+       "Datum": "2024-12-01",
+       "Beskrivning": "En central del av mitt arbete är att förstå våra användares behov. Genom kundintervjuer med frilansare samlar jag in värdefulla insikter som vi använder för att förbättra våra produkter och säkerställa att de verkligen skapar nytta i vardagen."
+   },
+
+
+   {
+       "Namn": "Pitchdeck till investerare",
+       "Kategori": "Pitch",
+       "Datum": "2025-01-20",
+       "Beskrivning": "Jag har ansvar för att bygga vårt pitchdeck och presentera våra produkter och vår vision för investerare. Fokus ligger på att visa hur våra AI-drivna lösningar möter verkliga behov, vilken potential marknaden har och varför ByteForge är rätt bolag att satsa på."
+   },
+
+
+   {
+       "Namn": "Projektledning av intern sprint",
+       "Kategori": "Utveckling",
+       "Datum": "2025-02-10",
+       "Beskrivning": "Som projektledare driver jag våra interna utvecklingssprintar. Jag håller i dagliga standups, följer upp arbetet och ser till att dokumentation finns på plats. Min roll är att skapa struktur och ge teamet de bästa förutsättningarna för att leverera i tid."
+   }
+
+
+]
+
+
+}
+
