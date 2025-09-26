@@ -1,5 +1,12 @@
 body {
-    background-color: #393d53;
+    background-color: rgb(4, 29, 72);
+}
+
+.logga {
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+  height: auto;
 }
 
 .profil {
@@ -20,19 +27,19 @@ body {
 
 .sned {
     font-style: italic;
-    color: rgb(248, 163, 44);
+    color: rgb(228, 154, 43);
     font-family: "Oswald", sans-serif;
     font-size: 100px;
     font-weight: 1000;
 }
 
 h2 {
-    color: rgb(220, 181, 127);
+    color: rgb(220, 233, 122);
     font-family: "Oswald", sans-serif;
 }
 
 p, h4 {
-    color: rgb(220, 181, 127);
+    color: rgb(236, 213, 173);
     font-family:"Oswald", sans-serif;
     font-weight: 300;
     font-size: 20px;
@@ -43,7 +50,7 @@ p, h4 {
 }
 
 .bar {
-  background: #c7c2b7;
+  background: #dddada;
   border-radius: 20px;
   overflow: hidden;
   height: 25px;
@@ -62,6 +69,35 @@ p, h4 {
   transition: width 2s; /* animation */
   box-shadow: 0 7px 10px rgba(0,0,0,1);
 }
+
+.slideshow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.slideshow img {
+  max-width: 400px;
+  max-height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+#mina-projekt {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* två kolumner */
+  gap: 20px; /* mellanrum mellan rutorna */
+}
+
+.projektkort {
+  border: 1px solid #969595;
+  padding: 15px;
+  border-radius: 8px;
+  background: #3670b4;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
 
 .html { background: rgb(213, 141, 8); width: 90%; }
 .css { background: rgb(213, 141, 8); width: 85%; }

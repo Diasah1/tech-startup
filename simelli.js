@@ -1,3 +1,35 @@
+// ===== Bildspel =====
+const bilder = [
+  './Bilder/Simelli-01.png',
+  './Bilder/Simelli-02.png',
+  './Bilder/Simelli-03.png',
+  './Bilder/Simelli-04.png',
+  './Bilder/Simelli-05.png'
+];
+
+let index = 0;
+const imgEl = document.getElementById('slideshow-image');
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+
+function visaBild() {
+  imgEl.src = bilder[index];
+}
+
+prevBtn.addEventListener('click', () => {
+  index = (index - 1 + bilder.length) % bilder.length;
+  visaBild();
+});
+
+nextBtn.addEventListener('click', () => {
+  index = (index + 1) % bilder.length;
+  visaBild();
+});
+
+// Startbild
+visaBild();
+
+
 // Progress-bar animation
 window.onload = () => 
   document.querySelectorAll('.fill').forEach(bar => {
@@ -12,48 +44,86 @@ window.onload = () =>
     }
   });
 
-  (async function laddaMinaProjekt() {
-  const container = document.getElementById('mina-projekt');
-  const felruta = document.getElementById('mina-projekt-fel');
+  (async () => {
+  const el = document.getElementById('mina-projekt');
+  const fail = (m) => el ? (el.innerHTML = `<p style="color:red">${m}</p>`) : null;
 
-  // Visa "laddar..."
-  container.innerHTML = '<p>Laddar projekt...</p>';
+  if (!el) return fail('Saknar <div id="mina-projekt"> i HTML.');
+
+  el.innerHTML = 'Laddar projekt...';
 
   try {
-    const res = await axios.get('./data/projects.json', { responseType: 'json' });
-    const alla = Array.isArray(res.data) ? res.data : [];
+    const res = await axios.get('./simelli.json', { responseType: 'json' });
+    const data = Array.isArray(res.data) ? res.data : [];
+    if (!data.length) return fail('Inga projekt hittades.');
 
-    // Filtrera: de projekt du ansvarar för
-    const mina = alla.filter(p => p.roll === 'System Designer' && p.ansvarig === 'Melli');
+    el.innerHTML = data.map(p => `
+      <article>
+        <h3>${p.titel}</h3>
+        <p>${p.beskrivning}</p>
+        <p><strong>Status:</strong> ${p.status}</p>
+      </article>
+    `).join('');
+  } catch (e) {
+    console.error(e);
+    fail('Kunde inte läsa in projekten.');
+  }
+})();
 
-    if (mina.length === 0) {
-      container.innerHTML = '<p>Inga projekt hittades.</p>';
-      return;
-    }
+(async () => {
+  const NAME = 'Simelli Ani'; 
+  const prioRank = { 'Låg': 1, 'Medium': 2, 'Hög': 3 };
 
-    // Bygg HTML
-    const html = mina.map(p => `
+  const listEl = document.getElementById('mina-projekt');
+  const statusEl = document.getElementById('filter-status');
+  const sortEl = document.getElementById('sort-prio');
+
+  listEl.innerHTML = 'Laddar projekt...';
+
+  let all = [];
+  try {
+    const res = await axios.get('./simelli.json', { responseType: 'json' });
+    all = (Array.isArray(res.data) ? res.data : []).filter(p => p.ansvarig === NAME);
+  } catch (e) {
+    console.error(e);
+    listEl.innerHTML = '<p style="color:red">Kunde inte läsa in projekten.</p>';
+    return;
+  }
+
+  function render(items) {
+    if (!items.length) { listEl.innerHTML = '<p>Inga projekt.</p>'; return; }
+    listEl.innerHTML = items.map(p => `
       <article class="projektkort">
-        <header>
-          <h3>${p.titel}</h3>
-          <small>${p.id}</small>
-        </header>
+        <h3>${p.titel}</h3>
         <p>${p.beskrivning}</p>
         <ul>
-          <li><strong>Status:</strong> ${p.status}</li>
-          <li><strong>Prioritet:</strong> ${p.prioritet}</li>
-          <li><strong>Period:</strong> ${p.startDatum} – ${p.slutDatum}</li>
-          <li><strong>Taggar:</strong> ${p.taggar.join(', ')}</li>
+          <li><b>Status:</b> ${p.status}</li>
+          <li><b>Prioritet:</b> ${p.prioritet}</li>
+          <li><b>Period:</b> ${p.startDatum} – ${p.slutDatum}</li>
         </ul>
       </article>
     `).join('');
-
-    container.innerHTML = html;
-
-  } catch (err) {
-    console.error(err);
-    container.innerHTML = '';
-    felruta.style.display = 'block';
-    felruta.innerHTML = '<p>Kunde inte läsa in projekt just nu. Försök igen senare.</p>';
   }
+
+  function apply() {
+    let out = [...all];
+
+    // Filtrera status
+    const s = statusEl.value; // "Alla" | "Pågår" | "Avslutad" | "Planerad"
+    if (s !== 'Alla') out = out.filter(p => p.status === s);
+
+    // Sortera (låg -> hög prioritet)
+    if (sortEl.value === 'prio-asc') {
+      out.sort((a, b) => (prioRank[a.prioritet] ?? 999) - (prioRank[b.prioritet] ?? 999));
+    }
+
+    render(out);
+  }
+
+  // init
+  apply();
+
+  // lyssna på ändringar
+  statusEl.addEventListener('change', apply);
+  sortEl.addEventListener('change', apply);
 })();

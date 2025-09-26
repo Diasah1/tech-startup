@@ -9,7 +9,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body> 
+  <img src="Bilder/Logga.png" alt="Logga" class="logga">
+
     <p class="sned">SIMELLI ANI</p>
   <div class="profil">
     <img src="Bilder/SimelliBild.PNG" alt="Bild på anställd">
@@ -28,6 +30,15 @@
       använda, tilltalande att titta på och som lämnar ett positivt intryck hos användaren.</p>
     </div>
   </div>
+
+<section id="bildspel">
+  <h2>Mina bilder</h2>
+  <div class="slideshow">
+    <button id="prev">⟨</button>
+    <img id="slideshow-image" src="Bilder/Simelli-P1.png" alt="bildspel" />
+    <button id="next">⟩</button>
+  </div>
+</section>
 
     <h2>KOMPETENSER:</h2>
     <div class="skill">
@@ -59,6 +70,21 @@
 </div>
 
 <section> 
+   <label>Status:
+    <select id="filter-status">
+      <option value="Alla">Alla</option>
+      <option value="Pågår">Pågår</option>
+      <option value="Avslutad">Avslutad</option>
+      <option value="Planerad">Planerad</option>
+    </select>
+  </label>
+
+  <label>Sortera:
+    <select id="sort-prio">
+      <option value="none">Ingen</option>
+      <option value="prio-asc">Prioritet: låg → hög</option>
+    </select>
+</label>
   <section>
   <h2>Mina projekt</h2>
   <div id="mina-projekt"></div>
@@ -69,5 +95,7 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <!-- Din appkod -->
 <script src=".simelli.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./simelli.js" defer></script>
 </body>
 </html>
