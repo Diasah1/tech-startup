@@ -1,0 +1,208 @@
+body{
+  margin:0;
+  background: rgb(243,240,235);
+}
+
+/* banner/topprad */
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:2px 4px;                 /* större höjd */
+  box-sizing:border-box;
+  width: calc(100% - 20px);
+  margin: 12px 10px 0;               /* lite mer luft runt = ser större ut */
+  background: rgb(17,21,74);
+  border-radius: 28px;                /* rundare men behåll samma look */
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+
+
+
+.logo-link{
+  display:block;
+  height: 88px;              /* synlig höjd på bannern */
+  overflow:hidden;
+}
+.logo-img{
+  display:block;
+  height: 140px !important;  /* gör själva bilden större */
+  width:auto;
+  margin: -18px 0 -14px -10px; /* flytta upp/vänster för att “klippa bort” luft */
+}
+
+
+
+.nav{
+  margin-left:auto;
+  display:flex;
+  gap:24px;
+}
+.nav a{
+  color: rgb(234,201,155);
+  text-decoration:none;
+  font-family:"Oswald",sans-serif;
+  font-size:22px;
+  font-weight:600;
+  letter-spacing:0.3px;
+}
+.nav a:hover,
+.nav a:focus{ text-decoration:underline; }
+
+/* rubriker + text */
+.snednamn{
+  font-style:italic;
+  color: rgb(17,21,74);
+  font-family:"Oswald",sans-serif;
+  font-size:70px;
+  font-weight:170;
+  margin:20px 16px 8px;
+}
+.undertitel{
+  color: rgb(17,21,74);
+  font-family:"Oswald",sans-serif;
+  font-size: clamp(18px, 3vw, 28px);
+  font-weight:400;
+  letter-spacing:1px;
+  margin:0 16px 16px;
+}
+
+h2 {
+  color: rgb(17,21,74);
+  font-family: "Oswald", sans-serif;
+}
+
+p, h4 {
+  color: rgb(17,21,74);
+  font-family:"Oswald", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+/* profil (originalet du bad om) */
+.profil {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;  /* viktigt: ingen vertikal stretch */
+  gap: 30px;
+}
+
+
+.profil img {
+  display: block;
+  width: 260px;            /* ändra storlek här vid behov */
+  height: auto !important; /* tvingar rätt proportion */
+  flex: 0 0 auto;          /* förhindrar flex-stretch */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px black;
+}
+
+
+.profil .info {
+  max-width: 600px;           /* gör så texten inte blir för bred */
+}
+
+/* kompetensstaplar */
+h2{ text-align: center; }
+
+/* Mindre och centrerade skills */
+.skill{
+  width: min(540px, 90%);   /* gör varje kort smalare */
+  margin: 10px auto;        /* centrerar hela blocket */
+  text-align: center;       /* centrerar rubriken/procentsiffran */
+}
+
+.skill h4{
+  font-size: 18px;          /* mindre rubrik */
+  margin: 6px 0 8px;
+}
+
+/* Själva stapeln – blir smalare via .skill-width ovan */
+.bar{
+  background: #36425c;
+  border-radius: 9999px;    /* rundare stapel */
+  overflow: hidden;
+  height: 18px;             /* lite lägre höjd */
+  width: 100%;              /* fyller .skill-bredden */
+}
+
+/* Fyllnaden i stapeln */
+.fill{
+  height: 100%;
+  line-height: 18px;        /* matchar höjden ovan */
+  font-size: 12px;          /* mindre text i stapeln */
+  color: #fff;
+  text-align: right;
+  padding-right: 8px;
+  border-radius: 9999px;
+  transition: width 2s;
+  box-shadow: 0 7px 10px rgba(0,0,0,1);
+}
+
+/* ===== Projektsektion ===== */
+.projects{
+  background: rgb(17,21,74);        /* din mörkblå */
+  margin-top: 40px;
+  padding: 24px 0 36px;
+  border-radius: 20px;
+}
+.projects-wrap{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.projects-title{
+  color: rgb(234,201,155);          /* beige rubrik */
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(28px, 4vw, 40px);
+  margin: 6px 0 20px;
+}
+
+.projects-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+}
+
+.project-card{
+  background: #3f5f96;              /* blå ton för kortet */
+  color: rgb(243,240,235);           /* ljus text */
+  border-radius: 16px;
+  padding: 18px 18px 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.12) inset,
+              0 4px 10px rgba(0,0,0,.15);
+}
+
+.project-card h3{
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(18px, 2.4vw, 24px);
+  margin: 0 0 6px;
+  color: rgb(243,240,235);
+}
+
+.project-lead{
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: rgb(243,240,235);
+}
+
+.project-card ul{
+  list-style: disc;
+  padding-left: 20px;
+  margin: 8px 0 0;
+}
+.project-card li{
+  margin: 4px 0;
+  font-size: 16px;
+}
+.project-card strong{
+  color: rgb(234,201,155);          /* beige etiketter: Status, Prioritet… */
+  font-weight: 700;
+}
+
+/* finjustera mobil */
+@media (max-width: 700px){
+  .projects{ border-radius: 12px; padding: 18px 0 28px; }
+  .project-card{ padding: 16px; }
+}

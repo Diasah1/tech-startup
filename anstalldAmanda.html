@@ -1,11 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexora - Amanda</title>
+  <link rel="stylesheet" href="./anstalldAmanda.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+  </head>
 <body>
-    
+
+  <header class="topbar">
+    <a href="index.html" class="logo-link" title="Till huvudsidan">
+      <img src="Bilder/Logga.png" alt="Nexoras logotyp" class="logo-img">
+    </a>
+    <nav class="nav" aria-label="Huvudmeny">
+      <a href="index.html">Hem</a>
+      <a href="om-oss.html">Om oss</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <p class="snednamn">AMANDA MAJVIND</p>
+  <p class="undertitel">Produktutvecklare</p>
+
+  <div class="profil">
+    <img src="Bilder/AmandaBild.PNG" alt="Bild på Amanda">
+    <div class="info">
+      <p>Jag arbetar som produktutvecklare och har ett starkt intresse för att förena kreativitet med teknik.</p>
+      <p>För mig handlar utveckling inte bara om att skapa en produkt, utan om att förstå behov, analysera problem och hitta lösningar som verkligen gör skillnad i människors vardag.</p>
+      <p>Min styrka ligger i att kombinera nytänkande idéer med strukturerade arbetsmetoder. Jag trivs bäst i processer där jag får följa hela resan från den första idén och skissen, till testning, förbättringar och slutligen en färdig produkt.</p>
+      <p>Under den resan är jag noggrann med detaljer, men har samtidigt alltid helheten i fokus. Som person är jag engagerad, nyfiken och tycker om att lära mig nya saker.</p>
+      <p>Jag ser utmaningar som möjligheter och är inte rädd för att tänka utanför ramarna när det behövs. För mig är det viktigt att arbeta nära andra.</p>
+      <p>Jag tror på att bra produkter utvecklas genom samarbete och genom att våga ta del av olika perspektiv.</p>
+      <p>Mitt mål är att skapa lösningar som är användarvänliga, hållbara och långsiktiga.</p>
+      <p>Oavsett om det handlar om att förbättra en befintlig process eller att bygga något helt nytt från grunden vill jag bidra till något som har verkligt värde för både människor och samhälle.</p>
+    </div>
+  </div>
+
+  <h2>KOMPETENSER:</h2>
+
+  <div class="skill">
+    <h4>UX & UI Design</h4>
+    <div class="bar"><div class="fill UX&UIDesign">90%</div></div>
+  </div>
+
+  <div class="skill">
+    <h4>Protoframtagning</h4>
+    <div class="bar"><div class="fill protoframtagning">85%</div></div>
+  </div>
+
+  <div class="skill">
+    <h4>Problemlösning</h4>
+    <div class="bar"><div class="fill problemlösning">90%</div></div>
+  </div>
+
+  <div class="skill">
+    <h4>Projektledning</h4>
+    <div class="bar"><div class="fill projektledning">95%</div></div>
+  </div>
+
+  <!-- PROJEKTSEKTIONEN-->
+  <section class="projects" id="projekt">
+    <div class="projects-wrap">
+      <h2 class="projects-title">Mina projekt</h2>
+
+      <div class="projects-grid">
+        <!-- 1 -->
+        <article class="project-card">
+          <h3>Kundportal – onboardingflöde</h3>
+          <p class="project-lead">Design av flöden, kontrakt och prototyper för smidig kundonboarding.</p>
+          <ul>
+            <li><strong>Status:</strong> Avslutat</li>
+            <li><strong>Prioritet:</strong> Hög</li>
+            <li><strong>Period:</strong> 2024-09-10 – 2025-01-15</li>
+          </ul>
+        </article>
+
+        <!-- 2 -->
+        <article class="project-card">
+          <h3>Rapportmotor v2 (prototyp)</h3>
+          <p class="project-lead">Modulär rapportering med JSON-templating och datamappning.</p>
+          <ul>
+            <li><strong>Status:</strong> Planerad</li>
+            <li><strong>Prioritet:</strong> Låg</li>
+            <li><strong>Period:</strong> 2025-09-05 – 2025-10-30</li>
+          </ul>
+        </article>
+
+        <!-- 3 -->
+        <article class="project-card">
+          <h3>Notistjänst (event bus)</h3>
+          <p class="project-lead">Design av eventbus, återförsökspolicy och kontrakt mellan tjänster.</p>
+          <ul>
+            <li><strong>Status:</strong> Pågår</li>
+            <li><strong>Prioritet:</strong> Hög</li>
+            <li><strong>Period:</strong> 2025-09-20 – 2025-11-01</li>
+          </ul>
+        </article>
+
+        <!-- 4 -->
+        <article class="project-card">
+          <h3>Admin-UI åt support</h3>
+          <p class="project-lead">Informationsarkitektur och gränser för adminverktyg. Klickvägar & prototyper.</p>
+          <ul>
+            <li><strong>Status:</strong> Pågår</li>
+            <li><strong>Prioritet:</strong> Låg</li>
+            <li><strong>Period:</strong> 2025-09-12 – 2025-10-25</li>
+          </ul>
+        </article>
+
+        <!-- 5 -->
+        <article class="project-card">
+          <h3>Designsystem & komponentbibliotek</h3>
+          <p class="project-lead">Skalbart UI-bibliotek (Figma → kod) med tokens, riktlinjer och QA-flöde.</p>
+          <ul>
+            <li><strong>Status:</strong> Avslutat</li>
+            <li><strong>Prioritet:</strong> Medel</li>
+            <li><strong>Period:</strong> 2025-02-01 – 2025-05-30</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
 </body>
 </html>
