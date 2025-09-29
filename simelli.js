@@ -1,10 +1,10 @@
 // ===== Bildspel =====
 const bilder = [
-  './Bilder/Simelli-01.png',
-  './Bilder/Simelli-02.png',
-  './Bilder/Simelli-03.png',
-  './Bilder/Simelli-04.png',
-  './Bilder/Simelli-05.png'
+  './Bilder/SimelliP1.png',
+  './Bilder/SimelliP2.jpg',
+  './Bilder/SimelliP3.png',
+  './Bilder/SimelliP4.png',
+  './Bilder/SimelliP5.jpg'
 ];
 
 let index = 0;
@@ -43,33 +43,7 @@ window.onload = () =>
       bar.style.width = '100%';
     }
   });
-
-  (async () => {
-  const el = document.getElementById('mina-projekt');
-  const fail = (m) => el ? (el.innerHTML = `<p style="color:red">${m}</p>`) : null;
-
-  if (!el) return fail('Saknar <div id="mina-projekt"> i HTML.');
-
-  el.innerHTML = 'Laddar projekt...';
-
-  try {
-    const res = await axios.get('./simelli.json', { responseType: 'json' });
-    const data = Array.isArray(res.data) ? res.data : [];
-    if (!data.length) return fail('Inga projekt hittades.');
-
-    el.innerHTML = data.map(p => `
-      <article>
-        <h3>${p.titel}</h3>
-        <p>${p.beskrivning}</p>
-        <p><strong>Status:</strong> ${p.status}</p>
-      </article>
-    `).join('');
-  } catch (e) {
-    console.error(e);
-    fail('Kunde inte läsa in projekten.');
-  }
-})();
-
+  
 (async () => {
   const NAME = 'Simelli Ani'; 
   const prioRank = { 'Låg': 1, 'Medium': 2, 'Hög': 3 };
@@ -127,3 +101,11 @@ window.onload = () =>
   statusEl.addEventListener('change', apply);
   sortEl.addEventListener('change', apply);
 })();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const rubrik = document.querySelector(".sned");
+  setTimeout(() => {
+    rubrik.classList.add("visa");
+  }, 300);
+});
+
