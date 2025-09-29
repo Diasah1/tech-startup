@@ -1,13 +1,24 @@
 body{
+<<<<<<< Updated upstream
   margin:0;
   background: rgb(243,240,235);
 }
 
 /* banner/topprad */
+=======
+  margin:0;          /* tar bort glapp överst */
+  background:rgb(243, 240, 235);   /* resten av sidan vit */
+}
+
+
+
+/* header-rad */
+>>>>>>> Stashed changes
 .topbar{
   display:flex;
   align-items:center;
   justify-content:space-between;
+<<<<<<< Updated upstream
   padding:2px 4px;                 /* större höjd */
   box-sizing:border-box;
   width: calc(100% - 20px);
@@ -34,13 +45,53 @@ body{
 
 
 
+=======
+  padding:4px 10px;
+  box-sizing:border-box;
+
+  /* fullbredd men med lite luft på sidorna */
+  width: calc(100% - 20px);
+  margin: 6px 10px 0;
+
+  background: rgb(11, 13, 46);
+  border-radius: 20px;        /* rundning ÖVER + UNDER */
+  overflow: hidden;           /* klipp innehållet mot rundningen */
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+
+@media (max-width: 600px){
+  body { padding: 0 8px; }
+}
+
+
+
+/* loggan */
+.logo-link{
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+  margin:0;              /* ingen auto-centrering */
+  cursor:pointer;
+}
+.logo-img{
+  display:block;
+  height: 168px;   /* samma höjd som länkarna */
+  width: auto; 
+}
+
+/* horisontell meny till höger */
+>>>>>>> Stashed changes
 .nav{
   margin-left:auto;
   display:flex;
   gap:24px;
 }
 .nav a{
+<<<<<<< Updated upstream
   color: rgb(234,201,155);
+=======
+  color:rgb(234,201,155);      /* beige för bra kontrast */
+>>>>>>> Stashed changes
   text-decoration:none;
   font-family:"Oswald",sans-serif;
   font-size:22px;
@@ -50,6 +101,7 @@ body{
 .nav a:hover,
 .nav a:focus{ text-decoration:underline; }
 
+<<<<<<< Updated upstream
 /* rubriker + text */
 .snednamn{
   font-style:italic;
@@ -94,6 +146,23 @@ p, h4 {
   width: 260px;            /* ändra storlek här vid behov */
   height: auto !important; /* tvingar rätt proportion */
   flex: 0 0 auto;          /* förhindrar flex-stretch */
+=======
+
+
+.profil {
+  display: flex;              /* gör två kolumner */
+  justify-content: center;      
+  gap: 30px;                  /* avstånd mellan bild och text */
+  align-items: flex-start;  
+}
+
+
+
+.profil img {
+  width: 260px;              /* ändra storlek här */
+  height: auto !important;   /* tvingar rätt proportion */
+  object-fit: contain;       /* ingen beskärning eller sträckning */
+>>>>>>> Stashed changes
   border-radius: 10px;
   box-shadow: 0 4px 8px black;
 }
@@ -103,6 +172,7 @@ p, h4 {
   max-width: 600px;           /* gör så texten inte blir för bred */
 }
 
+<<<<<<< Updated upstream
 /* kompetensstaplar */
 h2{ text-align: center; }
 
@@ -206,3 +276,77 @@ h2{ text-align: center; }
   .projects{ border-radius: 12px; padding: 18px 0 28px; }
   .project-card{ padding: 16px; }
 }
+=======
+
+.snednamn{
+  font-style:italic;
+  color:rgb(11, 13, 46);
+  font-family:"Oswald",sans-serif;
+  font-size:80px;
+  font-weight:1000;
+  margin:20px 16px 8px;   /* gör att bannern “slutar” precis innan */
+}
+
+.undertitel{
+  color: rgb(11, 13, 46);             /* samma mörkblå som namnet */
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(18px, 3vw, 28px);
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin: 0 16px 16px;              /* hamnar direkt under namnet */
+  text-transform: uppercase;        /* ta bort om du vill ha gemener */
+}
+
+h2 {
+    color: rgb(11, 13, 46); 
+    font-family: "Oswald", sans-serif;
+}
+
+
+p, h4 {
+    color: rgb(11, 13, 46);
+    font-family:"Oswald", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+
+.skill {
+  margin: 15px 0;
+}
+
+
+.bar {
+  background: #36425c;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 25px;
+  width: 700px;
+  max-width: 100%;
+}
+
+
+.fill {
+  height: 100%;
+  width: 0; /* startar tom */
+  line-height: 25px;
+  color: rgb(255, 255, 255);
+  text-align: right;
+  padding-right: 10px;
+  border-radius: 20px;
+  transition: width 2s; /* animation */
+  box-shadow: 0 7px 10px rgba(0,0,0,1);
+}
+
+
+.UX\&UIDesign { background: rgb(17,21,74); width: 90%; }
+.protoframtagning { background:rgb(17,21,74); width: 85%; }
+.problemlösning { background: rgb(17,21,74); width: 90%; }
+.projektledning { background:rgb(17,21,74); width: 95%; }
+
+
+
+
+
+
+>>>>>>> Stashed changes
