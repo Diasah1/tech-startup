@@ -10,7 +10,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body> 
-  <img src="Bilder/Logga.png" alt="Logga" class="logga">
+
+
+<header class="header">
+  <img src="Bilder/Logga.png" alt="Nexoras logga" class="nexora-logga">
+      <nav class="huvudmeny">
+      <ul>
+      <li><a href="huvudsida.html">Hem</a></li>
+      <li><a href="om-oss.html">Om oss</a></li>
+      <li><a href="kontaktformular.css">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
 
     <p class="sned">SIMELLI ANI</p>
   <div class="profil">
@@ -30,54 +42,67 @@
       använda, tilltalande att titta på och som lämnar ett positivt intryck hos användaren.</p>
     </div>
   </div>
+  
+<div class="sociala-medier">
+    <span class="folj-text">Följ mig</span>
+    <div class="ikoner">
+        <a href="https://www.linkedin.com/feed/" target="_blank">
+        <img src="Bilder/linkedIn.jpg" alt="LinkedIn" class="ikon">
+      </a>
+      <a href="https://github.com/simanv" target="_blank">
+        <img src="Bilder/github.png" alt="GitHub" class="ikon">
+     </a>
+    </div>
+  </div>
+</div>
 
 <section id="bildspel">
   <h2>Mina bilder</h2>
   <div class="slideshow">
     <button id="prev">⟨</button>
-    <img id="slideshow-image" src="Bilder/Simelli-P1.png" alt="bildspel" />
+    <img id="slideshow-image" src="./Bilder/SimelliP1.png" alt="bildspel">
     <button id="next">⟩</button>
   </div>
 </section>
 
     <h2>KOMPETENSER:</h2>
     <div class="skill">
-  <h4>HTML</h4>
+  <h5>HTML</h5>
   <div class="bar">
     <div class="fill html">90%</div>
   </div>
 </div>
 
 <div class="skill">
-  <h4>CSS</h4>
+  <h5>CSS</h5>
   <div class="bar">
     <div class="fill css">85%</div>
   </div>
 </div>
 
 <div class="skill">
-  <h4>Problemlösning</h4>
+  <h5>Problemlösning</h5>
   <div class="bar">
     <div class="fill problemlösning">90%</div>
   </div>
 </div>
 
 <div class="skill">
-  <h4>Teamwork</h4>
+  <h5>Teamwork</h5>
   <div class="bar">
     <div class="fill teamwork">100%</div>
   </div>
 </div>
 
 <section> 
-   <label>Status:
+   <h6> Status: </h6>
     <select id="filter-status">
       <option value="Alla">Alla</option>
       <option value="Pågår">Pågår</option>
       <option value="Avslutad">Avslutad</option>
       <option value="Planerad">Planerad</option>
     </select>
-  </label>
+</section>
 
   <label>Sortera:
     <select id="sort-prio">
@@ -90,6 +115,23 @@
   <div id="mina-projekt"></div>
   <div id="mina-projekt-fel" style="display:none;"></div>
 </section>
+
+
+<footer>
+  <div class="footer">
+    <div class="namn">
+      <h3>Nexora</h3>
+    </div>
+ <div class="footer-kontakt">
+  <h4>Kontakt</h4>
+  <p>Email: <a href="mailto:info@nexora.se">info@nexora.se</a></p>
+  <p>Telefon: +46 70 123 45 67</p>
+</div>
+<div class="footer-botten">
+  <p>© 2025 Nexora Alla rättigheter förbehållna.</p>
+</div>
+</div>
+</footer>
 
 <!-- Axios CDN -->
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
